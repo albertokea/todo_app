@@ -9,16 +9,20 @@ let searchBtn = document.querySelector('#todoSearch button');
 addBtn.addEventListener('click', saveTodo);
 
 function saveTodo() {
-    let todo = [
-        {
-            idTarea: listaTareas.length,
-            titulo: addTextInput.value,
-            prioridad: addSelector.value,
-        }]
+    if (addTextInput.value != '') {
+        let todo = [
+            {
+                idTarea: listaTareas.length,
+                titulo: addTextInput.value,
+                prioridad: addSelector.value,
+            }]
 
-    listaTareas.push(todo[0]);
+        listaTareas.push(todo[0]);
+    } else {
+        alert('Introduzca algún valor en el campo "Introduzca tarea"')
+    }
 }
 
-function printTodo(){
+function printTodo() {
 
 }

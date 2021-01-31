@@ -5,17 +5,81 @@ input, button, select{
 
 #todoAd input{
     width: 50%;
+    margin: 2em;
 }
 #todoAdd{
-    margin-left: 15%;
     width: 40%;
-    height: 2em;
+    margin: 2em 0;
+    margin-left: 7%;
 }
 
 #todoAdd input{
     width: 50%;
 }
 
+#todoAdd select{
+    margin: 0 0.6em;
+}
+
+
+
+#todoAdd div{
+    display: flex;
+    margin-left: 5%;
+}
+
 #todoSearch{
-    margin-left: 15%;
+    width: 40%;
+    margin-left: 7%;
+    background-color: teal;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+#todoSearch select{
+    margin: 0 0.5em;
+}
+
+#todoSearch input{
+    width: 15em;
+}
+
+#todoSearch div{
+    margin-left: 5%;
+}
+
+#todoPrint article{
+    width: 40%;
+    background-color: tomato;
+    height: 3.5em;
+    margin-left: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#todoPrint p{
+    margin-left: 5%;
+}
+
+article button{
+    background-color: red;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}
+
+footer{
+    height: 2.5em;
+    background-color: black;
+    width: 40%;
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+}
+
+footer span{
+    margin: auto 0;
+    margin-left: 3%;
+    color: blanchedalmond;
 }

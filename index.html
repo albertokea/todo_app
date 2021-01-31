@@ -12,23 +12,36 @@
 
 <body>
     <section id="todoAdd">
-        <input type="text" placeholder="Introduzca tarea" class="rounded">
-        <select name="" class="rounded">
-            <option value="urgente">Urgente</option>
-            <option value="diaria">Diaria</option>
-            <option value="mensual">Mensual</option>
-        </select>
-        <button class="rounded">Guardar</button>
+        <div>
+            <input type="text" placeholder="Introduzca tarea" class="rounded">
+            <select name="" class="rounded">
+                <option value="urgente">Urgente</option>
+                <option value="diaria">Diaria</option>
+                <option value="mensual">Mensual</option>
+            </select>
+            <button class="rounded">Guardar</button>
+        </div>
     </section>
 
     <section id="todoSearch">
+        <div>
         <select name="" id="todoSelector" class="rounded">
             <option value="urgente">Urgente</option>
             <option value="diaria">Diaria</option>
             <option value="mensual">Mensual</option>
         </select>
         <input type="text">
+        </div>
     </section>
+
+    <section id="todoPrint">
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <button>Eliminar</button>
+        </article>
+    </section>
+
+    <footer><span>TODO APP DE ALBERTO</span></footer>
 
     <script src="js/todo_app.js"></script>
 </body>
