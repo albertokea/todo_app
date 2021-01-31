@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,23 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/todo_datos.js"></script>
 </head>
-<body>
 
+<body>
+    <section id="todoAdd">
+        <input type="text" placeholder="Introduzca tarea" class="rounded">
+        <select name="" id="todoSelector" class="rounded">
+            <option value="urgente">Urgente</option>
+            <option value="diaria">Diaria</option>
+            <option value="mensual">Mensual</option>
+        </select>
+        <button class="rounded">Guardar</button>
+    </section>
+
+    <section id="todoSearch">
+
+    </section>
 
     <script src="js/todo_app.js"></script>
 </body>
+
 </html>
