@@ -1,8 +1,11 @@
-.rounded{
+input, button, select{
     border-radius: 10px;
     box-shadow: 1px 1px 5px black;
 }
 
+#todoAd input{
+    width: 50%;
+}
 #todoAdd{
     margin-left: 15%;
     width: 40%;
@@ -11,4 +14,8 @@
 
 #todoAdd input{
     width: 50%;
+}
+
+#todoSearch{
+    margin-left: 15%;
 }

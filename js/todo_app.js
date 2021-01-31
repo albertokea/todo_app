@@ -1,17 +1,24 @@
-let headerTextInput = document.querySelector('header input');
-let headerSelector = document.querySelector('#todoSelector');
-let headerBtn = document.querySelector('header button');
+let addTextInput = document.querySelector('#todoAdd input');
+let addSelector = document.querySelector('#todoAdd select');
+let addBtn = document.querySelector('#todoAdd button');
 let saveArray = []
 
-headerBtn.addEventListener('click', saveTodo);
+let searchInput = document.querySelector('#todoSearch input');
+let searchBtn = document.querySelector('#todoSearch button');
 
-function saveTodo(event) {
+addBtn.addEventListener('click', saveTodo);
+
+function saveTodo() {
     let todo = [
         {
             idTarea: listaTareas.length,
-            titulo: headerTextInput.value,
-            prioridad: headerSelector.value,
+            titulo: addTextInput.value,
+            prioridad: addSelector.value,
         }]
 
     listaTareas.push(todo[0]);
+}
+
+function printTodo(){
+
 }
