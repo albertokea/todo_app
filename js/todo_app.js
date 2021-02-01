@@ -43,8 +43,8 @@ function printTodo(todoList) {
     });
 }
 
-function todoColor(priority){
-    switch(priority){
+function todoColor(priority) {
+    switch (priority) {
         case 'urgente':
             return color = 'tomato';
         case 'diaria':
@@ -56,8 +56,18 @@ function todoColor(priority){
 
 searchSelector.addEventListener('change', filterByPriority)
 
-function filterByPriority(event){
-    filteredList = listaTareas.filter(todo=> todo.prioridad == event.target.value)
+function filterByPriority(event) {
+    filteredList = listaTareas.filter(todo => todo.prioridad == event.target.value)
     printTodo(filteredList);
-    if(event.target.value == "") printTodo(listaTareas)
+    if (event.target.value == "") printTodo(listaTareas)
+}
+
+searchInput.addEventListener('input', search)
+
+function search(event) {
+    filteredList = listaTareas.filter(todo => todo.titulo.includes(event.target.value))
+        printTodo(filteredList);
+if (event.target.value == ""){
+    printTodo(listaTareas)
+    } 
 }
