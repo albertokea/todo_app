@@ -8,6 +8,8 @@ let searchBtn = document.querySelector('#todoSearch button');
 
 let todoPrint = document.querySelector('#todoPrint')
 
+printTodo(listaTareas)
+
 addBtn.addEventListener('click', saveTodo);
 
 function saveTodo() {
@@ -23,15 +25,31 @@ function saveTodo() {
     } else {
         alert('Introduzca algún valor en el campo "Introduzca tarea"')
     }
+    printTodo(listaTareas)
 }
 
 function printTodo(todoList) {
+    todoPrint.innerHTML = ""
     todoList.forEach(todo => {
         let article = document.createElement('article');
-        let p = document.createElement('p')
+        let p = document.createElement('p');
+        let btn = document.createElement('button');
         p.innerHTML = todo.titulo;
-        article.appendChild(p)
+        btn.innerText = 'Eliminar';
+        article.appendChild(p);
+        article.appendChild(btn);
+        article.style.backgroundColor = todoColor(todo.prioridad);
         todoPrint.appendChild(article);
-        console.log(article);
     });
+}
+
+function todoColor(priority){
+    switch(priority){
+        case 'urgente':
+            return color = 'tomato';
+        case 'diaria':
+            return color = 'lightblue';
+        case 'mensual':
+            return color = 'greenyellow';
+    }
 }

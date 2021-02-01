@@ -16,13 +16,13 @@ var listaTareas = [
     },
     {
         idTarea: 3,
-        titulo: 'Pagar el alquiler',
-        prioridad: 'mensual',
+        titulo: 'Salir a correr',
+        prioridad: 'diaria',
     },
     {
         idTarea: 4,
-        titulo: 'Salir a correr',
-        prioridad: 'diaria',
+        titulo: 'Pagar el alquiler',
+        prioridad: 'mensual',
     },
     {
         idTarea: 5,
