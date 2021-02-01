@@ -6,6 +6,8 @@ let saveArray = []
 let searchInput = document.querySelector('#todoSearch input');
 let searchBtn = document.querySelector('#todoSearch button');
 
+let todoPrint = document.querySelector('#todoPrint')
+
 addBtn.addEventListener('click', saveTodo);
 
 function saveTodo() {
@@ -23,6 +25,13 @@ function saveTodo() {
     }
 }
 
-function printTodo() {
-
+function printTodo(todoList) {
+    todoList.forEach(todo => {
+        let article = document.createElement('article');
+        let p = document.createElement('p')
+        p.innerHTML = todo.titulo;
+        article.appendChild(p)
+        todoPrint.appendChild(article);
+        console.log(article);
+    });
 }

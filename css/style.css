@@ -3,14 +3,19 @@ input, button, select{
     box-shadow: 1px 1px 5px black;
 }
 
+section{
+    margin-left: 7%;
+    width: 40%
+}
+
 #todoAd input{
     width: 50%;
     margin: 2em;
 }
 #todoAdd{
-    width: 40%;
-    margin: 2em 0;
-    margin-left: 7%;
+    display: flex;
+    align-items: center;
+    height: 5em;
 }
 
 #todoAdd input{
@@ -21,16 +26,12 @@ input, button, select{
     margin: 0 0.6em;
 }
 
-
-
 #todoAdd div{
     display: flex;
     margin-left: 5%;
 }
 
 #todoSearch{
-    width: 40%;
-    margin-left: 7%;
     background-color: teal;
     height: 2.5em;
     display: flex;
@@ -50,12 +51,11 @@ input, button, select{
 }
 
 #todoPrint article{
-    width: 40%;
     background-color: tomato;
     height: 3.5em;
-    margin-left: 7%;
     display: flex;
     justify-content: space-between;
+    border: 1px chartreuse solid;
 }
 
 #todoPrint p{
