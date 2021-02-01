@@ -3,8 +3,8 @@ let addSelector = document.querySelector('#todoAdd select');
 let addBtn = document.querySelector('#todoAdd button');
 let saveArray = []
 
+let searchSelector = document.querySelector('#todoSearch select')
 let searchInput = document.querySelector('#todoSearch input');
-let searchBtn = document.querySelector('#todoSearch button');
 
 let todoPrint = document.querySelector('#todoPrint')
 
@@ -52,4 +52,12 @@ function todoColor(priority){
         case 'mensual':
             return color = 'greenyellow';
     }
+}
+
+searchSelector.addEventListener('change', filterByPriority)
+
+function filterByPriority(event){
+    filteredList = listaTareas.filter(todo=> todo.prioridad == event.target.value)
+    printTodo(filteredList);
+    if(event.target.value == "") printTodo(listaTareas)
 }
