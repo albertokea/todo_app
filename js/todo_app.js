@@ -8,12 +8,15 @@ let searchInput = document.querySelector('#todoSearch input');
 
 let todoPrint = document.querySelector('#todoPrint')
 
-printTodo(listaTareas)
+let idCount = 0;
+
+printTodo(listaTareas);
 
 addBtn.addEventListener('click', saveTodo);
 
 function saveTodo() {
     if (addTextInput.value != '') {
+        idCount++
         let todo = [
             {
                 idTarea: listaTareas.length,
@@ -34,12 +37,15 @@ function printTodo(todoList) {
         let article = document.createElement('article');
         let p = document.createElement('p');
         let btn = document.createElement('button');
+        article.classList.add('article' +todo.idTarea);
         p.innerHTML = todo.titulo;
         btn.innerText = 'Eliminar';
+        btn.classList.add(todo.idTarea);
         article.appendChild(p);
         article.appendChild(btn);
         article.style.backgroundColor = todoColor(todo.prioridad);
         todoPrint.appendChild(article);
+        btn.addEventListener('click', todoDelete);
     });
 }
 
@@ -65,9 +71,21 @@ function filterByPriority(event) {
 searchInput.addEventListener('input', search)
 
 function search(event) {
-    filteredList = listaTareas.filter(todo => todo.titulo.includes(event.target.value))
-        printTodo(filteredList);
-if (event.target.value == ""){
-    printTodo(listaTareas)
-    } 
+    searchSelector.value = "";
+    filteredList = listaTareas.filter(todo => todo.titulo.toLowerCase().includes(event.target.value))
+    printTodo(filteredList);
+    if (event.target.value == "") {
+        printTodo(listaTareas)
+    }
+}
+
+function todoDelete(event) {
+    let articleToDelete = document.querySelector('.article'+ event.target.classList)
+    articleToDelete.parentNode.removeChild(articleToDelete);
+    listaTareas.forEach(todo =>{
+        if(event.target.classList == todo.idTarea){
+            var index = listaTareas.indexOf(todo.idTarea);
+            listaTareas.splice(index, 1);
+        }
+    })
 }
